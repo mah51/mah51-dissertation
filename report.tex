@@ -1,0 +1,51 @@
+\documentclass[oneside]{tudelft-report}
+\usepackage{natbib}
+\usepackage{changes}
+\usepackage{subcaption}
+\usepackage[acronym]{glossaries}
+\usepackage[final]{pdfpages}
+
+\usepackage{tcolorbox}
+\newtcolorbox{redbox}[1]{colback=red!5!white,colframe=red!75!black,fonttitle=\bfseries,title=#1}
+
+
+\begin{document}
+
+
+%\hyphenpenalty=1000
+\includepdf[pages=-,pagecommand={},width=\textwidth]{./images/cover.pdf}
+%% Use Roman numerals for the page numbers of the title pages and table of
+%% contents.
+\includepdf[pages=-,pagecommand={},width=\textwidth]{./images/checklist.pdf}
+\frontmatter
+
+\tableofcontents
+
+
+
+\begin{doublespace}
+%% Use Arabic numerals for the page numbers of the chapters.
+\mainmatter
+%checklist
+
+%edit abstract.tex
+\input{abstract}
+%edit abbreviations.tex
+\input{abbreviations}
+%edit acknowledgements.tex
+\input{acknowledgements}
+%edit introduction.tex
+\input{introduction}
+%edit methods.tex
+\input{methods}
+%edit results.tex
+\input{results}
+%edit discussion.tex
+\input{discussion}
+
+\end{doublespace}
+
+\bibliography{Dissertation}
+
+\end{document}
+
